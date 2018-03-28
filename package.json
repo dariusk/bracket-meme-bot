@@ -1,0 +1,40 @@
+{
+  "name": "weird-brackets",
+  "description": "Generating bracket memes",
+  "version": "0.1.0",
+  "homepage": "https://github.com/dariusk/weird-brackets",
+  "author": {
+    "name": "Darius Kazemi",
+    "email": "darius.kazemi@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dariusk/weird-brackets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dariusk/weird-brackets/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/dariusk/weird-brackets/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "canvas": "^1.6.10",
+    "ent": "2.2.0",
+    "request": "~2.44.0",
+    "rita": "^1.3.11",
+    "twit": "~1.1.19",
+    "wordfilter": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.11.0",
+    "grunt-contrib-watch": "~0.6.0",
+    "grunt-notify": "~0.4.0"
+  },
+  "keywords": []
+}
