@@ -11,7 +11,6 @@
   "boss": true,
   "eqnull": true,
   "node": true,
-  "quotmark": "single",
   "-W065": true,
   "esnext": true,
   "globals": {

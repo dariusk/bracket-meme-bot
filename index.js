@@ -2,16 +2,13 @@ var request = require("request");
 var Twit = require("twit");
 var T = new Twit(require("./config.js"));
 var wordfilter = require("wordfilter");
-// var ent = require("ent");
 var rita = require("rita");
-// var lexicon = new rita.RiLexicon();
 var r = rita.RiTa;
 let width = 3072;
 let height = 1536;
-var Canvas = require("canvas"),
-  // Image = Canvas.Image,
-  canvas = new Canvas(width, height),
-  ctx = canvas.getContext("2d");
+var Canvas = require("canvas");
+var canvas = new Canvas(width, height);
+var ctx = canvas.getContext("2d");
 var fs = require("fs");
 
 Array.prototype.pick = function() {
@@ -99,7 +96,7 @@ function makeImage(names, title, cb) {
 
   var stream = canvas
     .createPNGStream()
-    .pipe(fs.createWriteStream(__dirname + `/output/${title}.png`));
+    .pipe(fs.createWriteStream(__dirname + "/out.png"));
   stream.on("close", function() {
     console.log("saved png");
     cb();
@@ -135,8 +132,4 @@ function tweet() {
 }
 
 // Tweet once on initialization
-// tweet();
-generate();
-generate();
-generate();
-generate();
+tweet();

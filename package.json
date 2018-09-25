@@ -1,18 +1,18 @@
 {
-  "name": "weird-brackets",
-  "description": "Generating bracket memes",
+  "name": "helvetica-ampersand-bot",
+  "description": "Generating weird designs inspired by Experimental Jetset's original 'John & Paul & Ringo & George' t-shirt",
   "version": "0.1.0",
-  "homepage": "https://github.com/dariusk/weird-brackets",
+  "homepage": "https://github.com/lol-russo/helvetica-ampersand-bot",
   "author": {
-    "name": "Darius Kazemi",
-    "email": "darius.kazemi@gmail.com"
+    "name": "Jack Lo Russo",
+    "email": "jack.lorusso@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dariusk/weird-brackets.git"
+    "url": "git://github.com/lol-russo/helvetica-ampersand-bot.git"
   },
   "bugs": {
-    "url": "https://github.com/dariusk/weird-brackets/issues"
+    "url": "https://github.com/lol-russo/helvetica-ampersand-bot/issues"
   },
   "licenses": [
     {
