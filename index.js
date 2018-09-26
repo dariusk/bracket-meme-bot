@@ -1,5 +1,7 @@
 var request = require("request");
 var Twit = require("twit");
+var express = require("express");
+var app = express();
 var T = new Twit(require("./config.js"));
 var wordfilter = require("wordfilter");
 var rita = require("rita");
@@ -10,6 +12,8 @@ var Canvas = require("canvas");
 var canvas = new Canvas(width, height);
 var ctx = canvas.getContext("2d");
 var fs = require("fs");
+
+app.use(express.static("public"));
 
 Array.prototype.pick = function() {
   return this[Math.floor(Math.random() * this.length)];
@@ -51,7 +55,7 @@ function generate() {
       request(url2, (err, resp, body) => {
         let result = JSON.parse(body).query.categorymembers;
         result = result.map(el => el.title.replace(/\s\(.*/, ""));
-        betterResult = result.filter(
+        let betterResult = result.filter(
           item => item.length <= 32 && !item.includes("List")
         );
 
@@ -74,12 +78,13 @@ function generate() {
 }
 
 let colorSchemes = [
-  { bg: "#ffffff", fg: "#000000" },
-  { bg: "#000000", fg: "#ffffff" },
+  { bg: "#ffffff", fg: "#181818" },
+  { bg: "#181818", fg: "#ffffff" },
   { bg: "#1899d5", fg: "#ffffff" },
   { bg: "#f76720", fg: "#ffffff" },
   { bg: "#de3d83", fg: "#ffffff" },
-  { bg: "#f54123", fg: "#ffffff" }
+  { bg: "#f54123", fg: "#ffffff" },
+  { bg: "#fee94e", fg: "#181818" }
 ];
 
 function makeImage(names, title, cb) {
@@ -131,5 +136,6 @@ function tweet() {
     .catch(e => console.log(e));
 }
 
-// Tweet once on initialization
-tweet();
+app.all("/" + process.env.BOT_ENDPOINT, function(req, res) {
+  tweet();
+});

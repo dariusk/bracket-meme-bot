@@ -1,4 +1,4 @@
-# helvetica-ampersand-bot
+# Helvetica& bot
 
 Generating designs inspired by the [John & Paul & Ringo & George](https://www.experimentaljetset.nl/archive/john-paul-ringo-george) t-shirt from Experimental Jetset. Content is sourced from Wikipedia.
 

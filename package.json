@@ -1,11 +1,15 @@
 {
   "name": "helvetica-ampersand-bot",
-  "description": "Generating weird designs inspired by Experimental Jetset's original 'John & Paul & Ringo & George' t-shirt",
+  "description": "Generating designs inspired by Experimental Jetset's iconic 'John & Paul & Ringo & George' t-shirt",
   "version": "0.1.0",
   "homepage": "https://github.com/lol-russo/helvetica-ampersand-bot",
   "author": {
     "name": "Jack Lo Russo",
     "email": "jack.lorusso@gmail.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,16 +29,12 @@
   },
   "dependencies": {
     "canvas": "^1.6.10",
-    "ent": "2.2.0",
-    "request": "~2.44.0",
+    "express": "^4.16.3",
+    "request": "^2.88.0",
     "rita": "^1.3.11",
     "twit": "~1.1.19",
-    "wordfilter": "*"
-  },
-  "devDependencies": {
-    "grunt-contrib-jshint": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.0",
-    "grunt-notify": "~0.4.0"
+    "wordfilter": "*",
+    "express": "^4.16.3"
   },
   "keywords": []
 }
