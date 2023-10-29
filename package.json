@@ -22,9 +22,6 @@
       "url": "https://github.com/dariusk/weird-brackets/blob/master/LICENSE-MIT"
     }
   ],
-  "engines": {
-    "node": "8"
-  },
   "dependencies": {
     "canvas": "^2.11.1",
     "request": "^2.88.0",
